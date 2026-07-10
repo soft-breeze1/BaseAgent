@@ -125,7 +125,7 @@ git clone https://huggingface.co/BAAI/bge-small-zh-v1.5
 | `vocab.txt` | ✅ |
 | `special_tokens_map.json` | ✅ |
 
-### 最终文件放置结构（绝对路径，严防套娃）
+### 最终文件放置结构（绝对路径）
 
 确保放置后目录结构如下（**不是** `bge-reranker-v2-m3/bge-reranker-v2-m3/` 这种嵌套）：
 
