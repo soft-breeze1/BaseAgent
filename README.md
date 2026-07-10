@@ -92,7 +92,7 @@ BaseAgent 是一个面向开发者的全栈 **RAG（检索增强生成）** 与 
 git lfs install
 
 # 2. 克隆 bge-reranker-v2-m3（约 2.1GB，耗时较长）
-cd C:\Users\YA\Desktop\BaseAgent
+cd BaseAgent
 git clone https://huggingface.co/BAAI/bge-reranker-v2-m3
 
 # 3. 克隆 bge-small-zh-v1.5（约 133MB）
@@ -125,21 +125,21 @@ git clone https://huggingface.co/BAAI/bge-small-zh-v1.5
 | `vocab.txt` | ✅ |
 | `special_tokens_map.json` | ✅ |
 
-### 最终文件放置结构（绝对路径）
+### 最终文件放置结构（绝对路径，严防套娃）
 
 确保放置后目录结构如下（**不是** `bge-reranker-v2-m3/bge-reranker-v2-m3/` 这种嵌套）：
 
 ```
-C:\Users\YA\Desktop\BaseAgent\
-├── bge-reranker-v2-m3\         ← 一级目录，直接包含模型文件
+BaseAgent/
+├── bge-reranker-v2-m3/         ← 一级目录，直接包含模型文件
 │   ├── model.safetensors        (2.1GB，核心文件)
 │   ├── config.json
 │   ├── tokenizer.json
 │   ├── tokenizer_config.json
 │   ├── sentencepiece.bpe.model
 │   ├── special_tokens_map.json
-│   └── assets\
-├── hf_cache\                    ← bge-small-zh-v1.5 的副本
+│   └── assets/
+├── hf_cache/                    ← bge-small-zh-v1.5 的副本
 │   ├── model.safetensors        (133MB)
 │   ├── config.json
 │   └── ...
@@ -164,7 +164,7 @@ C:\Users\YA\Desktop\BaseAgent\
 
 ```bash
 # 1. 进入项目目录
-cd C:\Users\YA\Desktop\BaseAgent
+cd BaseAgent
 
 # 2. 启动所有服务
 docker-compose up -d
