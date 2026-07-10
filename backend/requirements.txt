@@ -1,0 +1,84 @@
+# FastAPI & Server
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.19
+
+# Database & ORM
+SQLAlchemy==2.0.35
+asyncmy==0.2.10
+aiomysql==0.2.0
+cryptography==44.0.0
+PyMySQL==1.1.1
+
+# Redis & Cache
+redis==5.2.1
+aioredis==2.0.1
+# AI / LangChain
+langchain>=0.3.7
+langchain-community>=0.3.5
+langchain-openai>=0.2.14
+langchainhub>=0.1.21
+langgraph>=0.2.0
+
+# Document Processing
+pypdf==5.6.0
+python-docx==1.1.2
+python-magic==0.4.27
+markdown==3.7
+openpyxl==3.1.5
+chardet==5.2.0
+unstructured>=0.16.0
+unstructured-client>=0.38.0
+rapidocr-onnxruntime>=1.3.22
+langchain-text-splitters>=0.3.2
+
+# Vector Store
+qdrant-client>=1.10.0,<1.12.0
+langchain-qdrant>=0.2.0
+
+# Embeddings
+sentence-transformers==3.3.1
+
+# Web Search
+tavily-python==0.5.0
+
+# MCP SDK
+mcp>=1.0.0
+
+# HTTP Client
+httpx==0.28.1
+
+# JWT & Password
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+# bcrypt>=4.1 破坏了 passlib 的兼容性（移除自动截断密码到72字节）
+# 锁定在 4.0.x 以避免 ValueError: password cannot be longer than 72 bytes
+bcrypt<4.1
+
+# Utilities
+beautifulsoup4>=4.12.0
+qrcode[pil]>=7.4.0
+Pillow>=10.0.0
+celery==5.4.0
+cachetools>=5.5.0
+PyYAML>=6.0
+python-frontmatter>=1.1.0
+pydantic>=2.0.0
+pydantic-settings==2.7.0
+python-dotenv==1.0.1
+alembic==1.14.0
+tiktoken==0.8.0
+tqdm==4.67.1
+nltk==3.9.1
+jieba==0.42.1
+loguru==0.7.3
+aiofiles==24.1.0
+watchfiles==1.0.5
+
+# ========== OCR 依赖（解决 opencv 版本冲突） ==========
+opencv-python==4.11.0.86
+opencv-python-headless==4.11.0.86
+paddleocr==2.8.1
+mineru==2.7.0
+# 繁简转换
+opencc==1.1.7

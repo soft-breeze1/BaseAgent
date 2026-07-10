@@ -1,0 +1,74 @@
+# ====================================
+# 大模型文件（手动下载，不纳入版本控制）
+# ====================================
+bge-reranker-v2-m3/
+hf_cache/
+mineru-models/
+
+# ====================================
+# Python
+# ====================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.env
+.venv
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# ====================================
+# IDE & Editor
+# ====================================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ====================================
+# Node / Frontend  →  node_modules 不上传 GitHub！
+# ====================================
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# ====================================
+# Docker
+# ====================================
+.dockerignore
+
+# ====================================
+# Database / Runtime Data
+# ====================================
+data/db/
+*.db
+*.sqlite
+
+# ====================================
+# OS
+# ====================================
+Thumbs.db
+.DS_Store
+
+# ====================================
+# 🔐 敏感配置（禁止上传）
+# ====================================
+
+# .env 文件包含真实 API Key（Tavily/OpenAI/DeepSeek/Kimi 等）
+.env
+.env.*
+!.env.example
+backend/.env
+
+# 运行时数据可能包含用户配置的 API Key
+backend/data/
+output/
+
+# 工具配置持久化（可能包含 Tavily Key）
+backend/data/tool_configs.json
